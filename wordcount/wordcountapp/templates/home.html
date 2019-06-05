@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+{% load static %}
+<head>
+    <title>wordcount</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class ="container">
+            <h1>WORDCOUNT</h1>
+        </div>
+    </header>
+    <a href="{% url 'about' %}">ABOUT</a>
+    <br>
+    <br>
+    <br>
+    <div id='self_content' class="container">
+        <tr>
+            <td colspan="3">
+                <form action="{% url 'result' %}">
+                    <textarea cols="40" rows="10" name="fulltext"></textarea>
+                    <br>
+                    <br>
+                    <input type="submit" value="Count!">
+                </form>
+            </td>
+        </tr>
+    </div>    
+</body> 

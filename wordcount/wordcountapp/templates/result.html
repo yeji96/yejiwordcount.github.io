@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html>
+    <head>
+        <title>wordcount</title>
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <header>
+            <div class ="container">
+                <h1>WORDCOUNT</h1>
+            </div>
+        </header>
+        <div class="container">
+            <h1>당신이 입력한 텍스트는 {{all}}개의 문장과 {{total}}개의 단어로 구성되어 있습니다.</h1>
+            <br>
+            <a href="{% url 'home' %}">다시 하기</a>
+        </div>
+        <br>
+        <div class="container">
+            <div id='self_content'>
+                <table border="1" bordercolor="blue" align="center" width="300px" height="400">
+                    <th><h2> 입력한 텍스트 : </h2></th>
+                    <tr><td>{{full}}</td></tr>
+                    <br>
+                    <th><h2> 단어 카운트: </h2></th>
+                    <tr>
+                        <td>
+                            {% for word, howmany in dictionary %}
+
+                            {{word}}:{{howmany}}
+                            <br>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
+

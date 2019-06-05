@@ -1,0 +1,29 @@
+
+body{
+    padding-left:15px;
+}
+
+.container{
+    text-align: center;
+}
+
+header{
+    background-size: 100% 100%;
+    background-color: yellowgreen;
+    height : 100px;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    line-height: auto;
+}
+
+#self_content{
+
+    text-decoration-color: rgba(243, 227, 3, 0.774);
+
+}
+
+#self_content table{
+    text-align: center;
+    line-height: auto;
+}
